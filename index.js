@@ -172,3 +172,5 @@ function canGoOnDreamVacation(money, vacationDays) {
 }
 let recommendation = canGoOnDreamVacation(1500, 10);
 console.log(recommendation);
+
+// This was michael reviewing.
