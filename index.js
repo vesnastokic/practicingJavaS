@@ -46,8 +46,13 @@ for (let i = 0; i < names.length; i++) {
 }
 
 // Coding steps 3
-//Coding steps 4
+//how do we access the last element of any array.
+console.log(names[names.length-1])
 
+
+//Coding steps 4
+// how do we access the first element of any array.
+console.log(names[0])
 
 //Coding steps 5 
 
@@ -76,4 +81,94 @@ for (let i = 0; i < nameLengths.length; i++) {
 
 console.log(`Sum of Name Lengths: ${sum}`);
 
+//Coding steps 7
+function repeatWord(word, n) {
+    return word.repeat(n);
+}
 
+// repeat hello 3
+let repeatedHello = repeatWord('Hello', 3);
+console.log(repeatedHello); 
+
+//Coding steps 8
+function getFullName(firstName, lastName) {
+    return `${firstName} ${lastName}`;
+}
+
+let fullName = getFullName('Tom', 'Smith');
+console.log(fullName); 
+
+//Coding steps 9
+//f array greater then 100
+function isSumGreaterThan100(numbers) {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum > 100;
+}
+
+let isSumGreaterThan100Result = isSumGreaterThan100([40, 30, 35]);
+console.log(isSumGreaterThan100Result); 
+
+//Coding steps 10
+//f array average numbers
+function calculateAverage(numbers) {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum / numbers.length;
+}
+
+let average = calculateAverage([8, 16, 24]);
+console.log(average); 
+
+//Coding steps 11
+function compareAverages(array1, array2) {
+    let average1 = calculateAverage(array1);
+    let average2 = calculateAverage(array2);
+
+    return average1 > average2;
+}
+
+function calculateAverage(numbers) {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum / numbers.length;
+}
+
+let isAverageOfArray1Greater = compareAverages([10, 20, 30], [5, 15, 25]);
+console.log(isAverageOfArray1Greater); 
+
+//Coding steps 12
+function willBuyDrink(isHotOutside, moneyInPocket) {
+    return isHotOutside && moneyInPocket > 10.50;
+}
+
+let shouldBuyDrink = willBuyDrink(true, 15.00);
+console.log(shouldBuyDrink); // Output: true
+
+//Coding steps 13
+function canGoOnDreamVacation(money, vacationDays) {
+    // Define money, vacation days
+    const requiredMoney = 2000;
+    const requiredVacationDays = 7;
+
+    // Money and vacation days meet the minimum requirements
+    if (money >= requiredMoney && vacationDays >= requiredVacationDays) {
+        return "You can go on vacation! Enjoy your time off!";
+    } else {
+        return "You might need more money or more vacation days. Plan smart!";
+    }
+}
+let recommendation = canGoOnDreamVacation(1500, 10);
+console.log(recommendation);
